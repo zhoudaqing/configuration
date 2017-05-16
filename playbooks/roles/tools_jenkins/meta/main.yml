@@ -9,3 +9,7 @@ dependencies:
     jenkins_deb_url: "http://pkg.jenkins-ci.org/debian-stable/binary/jenkins_{{ jenkins_version }}_all.deb"
     jenkins_custom_plugins: []
     jenkins_bundled_plugins: "{{ jenkins_tools_bundled_plugins }}"
+  # Needed to be able to build docker images. Used by Docker Image Builder Jobs.
+  - role: docker-tools
+    docker_users:
+        - jenkins
