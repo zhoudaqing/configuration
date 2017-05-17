@@ -66,3 +66,5 @@ jenkins_tools_bundled_plugins:
   - "pam-auth"
   - "ssh-credentials"
   - "ssh-slaves"
+
+jenkins_tools_docker_user: 'jenkins-docker-proxy'
