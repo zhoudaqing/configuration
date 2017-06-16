@@ -67,4 +67,4 @@ jenkins_tools_bundled_plugins:
   - "ssh-credentials"
   - "ssh-slaves"
 
-jenkins_tools_docker_user: 'jenkins-docker-proxy'
+JENKINS_TOOLS_DOCKER_USER: 'jenkins-docker-proxy'
