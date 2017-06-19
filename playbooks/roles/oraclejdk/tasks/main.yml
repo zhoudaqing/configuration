@@ -31,10 +31,14 @@
     group: root
 
 - name: Untar Oracle Java
-  shell: "tar -C /usr/lib/jvm -zxvf /var/tmp/{{ oraclejdk_file }}"
-  args:
-    executable: /bin/bash
-    creates: "/usr/lib/jvm/{{ oraclejdk_base }}"
+  # shell: "tar -C /usr/lib/jvm -zxvf /var/tmp/{{ oraclejdk_file }}"
+  unarchive:
+    src: /var/tmp/{{ oraclejdk_file }}
+    dest: /usr/lib/jvm
+    remote_src: True
+  # args:
+    # executable: /bin/bash
+    # creates: "/usr/lib/jvm/{{ oraclejdk_base }}"
 
 - name: Create symlink expected by elasticsearch
   file:

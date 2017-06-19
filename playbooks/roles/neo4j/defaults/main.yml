@@ -29,5 +29,5 @@ neo4j_heap_max_size: "3000M"
 neo4j_log_dir: "{{ COMMON_LOG_DIR }}/neo4j"
 
 # Properties file settings
-neo4j_https_settings_key: "dbms.connector.https.address"
-neo4j_http_settings_key: "dbms.connector.http.address"
+neo4j_https_settings_key: "dbms.connector.https.listen_address"
+neo4j_http_settings_key: "dbms.connector.http.listen_address"
