@@ -107,7 +107,7 @@
         {% if item.get('staff') %}--staff{% endif %}
         {% if item.get('unusable_password') %}--unusable-password{% endif %}
         {% if item.get('initial_password_hash') %}--initial-password-hash {{ item.initial_password_hash | quote }}{% endif %}
-      with_items: "{{ django_users }}"
+      with_items: "{{ SANDBOX_EDXAPP_USERS }}"
       register: manage_users_result
       failed_when: (manage_users_result | failed) and not (ignore_user_creation_errors | bool)
       become: true
